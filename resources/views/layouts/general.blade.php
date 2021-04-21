@@ -10,10 +10,6 @@
 <body>
 <nav>
                             <a href='/index'>Home page</a>
-                            <a href='/about'>About</a>
-                            <a href='/about'>About</a>
-                            <a href='/about'>About</a>
-                            <a href='/about'>About</a>
                             </nav>
 @guest
                             @if (Route::has('login'))
