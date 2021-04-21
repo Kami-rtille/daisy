@@ -43,7 +43,7 @@ class FirstController extends Controller
         $p->note = $request->input("note");
         $p->user_id = Auth::id();
         $p->save(); //INSERT....
-        return redirect("/index");
+        return redirect("/");
     }
 
     public function users($id) {
