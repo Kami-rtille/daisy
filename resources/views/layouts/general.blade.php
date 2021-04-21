@@ -9,12 +9,9 @@
 </head>
 <body>
 <nav>
-<<<<<<< HEAD
+
                             <a href='/'><img src="/images/uploads/1/oui.png"/></a>
                             <a href='/about'>ABOUT</a>
-=======
-                            <a href='/index'>Home page</a>
->>>>>>> d180b81d4d08bcd9776d39e4c2c8949f5577bc67
                             </nav>
 @guest
                             @if (Route::has('login'))
