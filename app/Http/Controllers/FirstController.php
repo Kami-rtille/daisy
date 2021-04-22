@@ -63,7 +63,6 @@ class FirstController extends Controller
         $response = Http::get('https://trefle.io/api/v1/plants/search?token=9kzxH4ZVjL9YAkBi8_ox02G5YlzfDJbTR91UZA9BJMk&q='.$search);
        return view("firstcontroller.herbarium", ["responses" => $response->json()]);
     }
-    
 }
 
 

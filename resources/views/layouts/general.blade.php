@@ -7,9 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
-<body>
+<body>  
     <div class="container">
 @guest
+    @include('socialite.login-register')
     @if (Route::has('login'))
         <li class="nav-item">
             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
