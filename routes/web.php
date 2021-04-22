@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
+use App\Http\Controllers\SocialiteController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,7 +26,16 @@ Route::post("/photos/store", [FirstController::class, "store"])->middleware("aut
 Route::get("/users/{id}", [FirstController::class, "users"]);
 Route::get("/changesuivi/{id}", [FirstController::class, "changesuivi"])->where("id", "[0-9]+")->middleware("auth");
 
+# Socialite URLs
 
+// La page où on présente les liens de redirection vers les providers
+Route::get("/loginregister", [SocialiteController::class, "loginregister"]);
+
+// La redirection vers le provider
+Route::get("redirect/{provider}", [SocialiteController::class, "redirect"])->name('socialite.redirect');
+
+// Le callback du provider
+Route::get("callback/{provider}", [SocialiteController::class, "callback"])->name('socialite.callback');
 
 Auth::routes();
 

@@ -56,6 +56,9 @@ class FirstController extends Controller
         Auth::user()->IFollowThem()->toggle($id);
         return back();
     }
+
+
+    
 }
 
 
