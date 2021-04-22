@@ -8,7 +8,7 @@
 
 </head>
 <body>  
-    <div class="container">
+    <div class="loginpage">
 @guest
     @include('socialite.login-register')
     @if (Route::has('login'))
