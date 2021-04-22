@@ -11,3 +11,14 @@
     position: fixed;
     bottom: 0;
 }
+
+.sheets{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.sheet{
+    img{
+        width: 5vw;
+    }
+}
