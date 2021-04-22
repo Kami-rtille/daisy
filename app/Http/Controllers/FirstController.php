@@ -1,11 +1,10 @@
 <?php
-
-
 namespace App\Http\Controllers;
 use App\Models\Photo;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
 
 class FirstController extends Controller
 {
@@ -48,8 +47,7 @@ class FirstController extends Controller
 
     public function users($id) {
         $user = User::findOrFail($id);
-        return
-         view("firstcontroller.users", ["user" => $user]);
+        return view("firstcontroller.users", ["user" => $user]);
     }
     public function changesuivi($id) {
         $user = User::findOrFail($id);
@@ -57,8 +55,14 @@ class FirstController extends Controller
         return back();
     }
 
-
-    
+    public function herbarium(){
+        $plant = Http::get('https://trefle.io/api/v1/plants?token=9kzxH4ZVjL9YAkBi8_ox02G5YlzfDJbTR91UZA9BJMk');
+       return view("firstcontroller.herbarium", ["plant" => $plant->json()]);
+    }
+    public function herbariumsearch($search){
+        $response = Http::get('https://trefle.io/api/v1/plants/search?token=9kzxH4ZVjL9YAkBi8_ox02G5YlzfDJbTR91UZA9BJMk&q='.$search);
+       return view("firstcontroller.herbarium", ["responses" => $response->json()]);
+    }
 }
 
 

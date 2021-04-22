@@ -1,0 +1,14 @@
+.container{
+    position: relative;
+    height: 100%;
+}
+
+.menu{
+    width: 100vw;
+    padding: 3vw 0;
+    background-color: white;
+    display: flex; 
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+}

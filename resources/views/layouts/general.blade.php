@@ -24,12 +24,11 @@
         </li>
     @endif
     @else
-    <nav>
+    <nav class="menu">
         <a href='/'><img src="/assets/home.svg" alt="Home"/></a>
         <a href='/photos/create'><img src="/assets/plus-circle.svg" alt="Create a Post"/></a>
-        <a href='/about'><img src="/assets/book.svg" alt="Herbarium"/></a>
+        <a href='/herbarium'><img src="/assets/book.svg" alt="Herbarium"/></a>
         <a href="/users/{{ Auth::user()->id }}"><img src="/assets/user.svg" alt="Profil"/></a>
-        
     </nav>
         <li>
             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
