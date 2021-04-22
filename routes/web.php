@@ -13,7 +13,9 @@ use App\Http\Controllers\FirstController;
 |
 */
 
-Route::get('/about', [FirstController::class, 'about']);
+Route::get('/herbarium', [FirstController::class, 'herbarium']);
+Route::get('/herbarium/{search}', [FirstController::class, 'herbarium']);
+
 Route::get('/', [FirstController::class, 'index']);
 Route::get('/article/{id}', [FirstController::class, 'article']);
 Route::get('/article/{id}', [FirstController::class, 'article'])->where('id','[0-9]+');
@@ -23,8 +25,6 @@ Route::post("/photos/store", [FirstController::class, "store"])->middleware("aut
 
 Route::get("/users/{id}", [FirstController::class, "users"]);
 Route::get("/changesuivi/{id}", [FirstController::class, "changesuivi"])->where("id", "[0-9]+")->middleware("auth");
-
-
 
 Auth::routes();
 
