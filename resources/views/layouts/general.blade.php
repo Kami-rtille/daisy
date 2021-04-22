@@ -5,13 +5,12 @@
 <link href='/css/style.css' type='text/css' rel="stylesheet" />
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
 <body>  
-    <div class="loginpage">
+    <div class="container">
 @guest
-    @include('socialite.login-register')
-    @if (Route::has('login'))
+@include('socialite.login-register')
+    @if (1||Route::has('login'))
         <li class="nav-item">
             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
         </li>

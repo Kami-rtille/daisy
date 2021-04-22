@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="socialite">
 	<h1>Se connecter / S'enregistrer avec un compte social</h1>
 	<p>
 		<!-- Lien de redirection vers Google -->

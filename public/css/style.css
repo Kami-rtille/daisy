@@ -1,7 +1,6 @@
 /*== Load styles ==*/
 .container {
   position: relative;
-  height: 100%;
 }
 
 .menu {
@@ -10,7 +9,7 @@
   background-color: white;
   display: flex;
   justify-content: space-around;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 
