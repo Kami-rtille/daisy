@@ -89,9 +89,9 @@
 }
 
 .header {
-  padding-left: 5vw;
-  padding-right: 5vw;
-  width: 90vw;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+  width: 85vw;
   height: 5rem;
   display: flex;
   flex-direction: row;
@@ -108,6 +108,135 @@
   color: red;
   font-family: "Montserrat";
   font-size: 0.8rem;
+}
+
+.file-section {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 10rem;
+  box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  color: #434343;
+  font-family: "Montserrat";
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.file {
+  display: none;
+}
+
+div {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div h2 {
+  font-family: "Montserrat";
+  color: #434343;
+  width: 20rem;
+  font-size: 1.2rem;
+}
+
+div input {
+  border: none;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 20px;
+  font-family: "Montserrat";
+  color: white;
+  width: 75%;
+}
+
+div input::-moz-placeholder {
+  font-family: "Montserrat";
+  color: white;
+  opacity: 1;
+  width: 100%;
+}
+
+div input:-ms-input-placeholder {
+  font-family: "Montserrat";
+  color: white;
+  opacity: 1;
+  width: 100%;
+}
+
+div input::placeholder {
+  font-family: "Montserrat";
+  color: white;
+  opacity: 1;
+  width: 100%;
+}
+
+input:focus {
+  outline: none !important;
+  border-color: #4DBF52;
+  border: none;
+  background-color: white;
+}
+
+.yellow:focus {
+  border: solid 1px #FFC700;
+}
+
+.yellow:focus::-moz-placeholder {
+  color: #FFC700;
+}
+
+.yellow:focus:-ms-input-placeholder {
+  color: #FFC700;
+}
+
+.yellow:focus::placeholder {
+  color: #FFC700;
+}
+
+.green:focus {
+  border: solid 1px #4DBF52;
+}
+
+.green:focus::-moz-placeholder {
+  color: #4DBF52;
+}
+
+.green:focus:-ms-input-placeholder {
+  color: #4DBF52;
+}
+
+.green:focus::placeholder {
+  color: #4DBF52;
+}
+
+.lightgreen:focus {
+  border: solid 1px #7EDA82;
+}
+
+.lightgreen:focus::-moz-placeholder {
+  color: #7EDA82;
+}
+
+.lightgreen:focus:-ms-input-placeholder {
+  color: #7EDA82;
+}
+
+.lightgreen:focus::placeholder {
+  color: #7EDA82;
+}
+
+.submit {
+  background-color: #4DBF52;
+  color: white;
+  width: 40vw;
+  margin-left: 25vw;
+  margin-top: 2rem;
+  border-radius: 20px;
 }
 
 /*== Load Fonts ==*/
