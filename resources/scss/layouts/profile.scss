@@ -1,0 +1,32 @@
+*{
+    margin: 0 auto;
+}
+
+.profil{
+    margin: 5% 10%;
+}
+.follows{
+    display: flex;
+    margin: 5% 20%;
+    .follow{
+        margin: 2vw;
+        font-family: $text;
+        color:$black;
+    }
+}
+
+.users{
+    font-family: $text;
+    color:$green;
+    font-size: 1rem;
+}
+
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+  }
+  
+  #panel {
+    padding: 50px;
+    display: none;
+  }

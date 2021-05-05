@@ -94,6 +94,41 @@
   font-size: 0.8rem;
 }
 
+* {
+  margin: 0 auto;
+}
+
+.profil {
+  margin: 5% 10%;
+}
+
+.follows {
+  display: flex;
+  margin: 5% 20%;
+}
+
+.follows .follow {
+  margin: 2vw;
+  font-family: "Montserrat";
+  color: #434343;
+}
+
+.users {
+  font-family: "Montserrat";
+  color: #4DBF52;
+  font-size: 1rem;
+}
+
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+
 /*== Load Fonts ==*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
