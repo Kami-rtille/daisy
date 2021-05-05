@@ -109,8 +109,8 @@
 }
 
 .header {
-  padding-left: 5vw;
-  padding-right: 5vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
   width: 80vw;
   height: 5rem;
   display: flex;
@@ -121,6 +121,7 @@
   background-color: white;
   position: fixed;
   top: 0;
+  margin: 0 auto;
 }
 
 .header a {
@@ -149,7 +150,7 @@
   display: none;
 }
 
-div {
+.create {
   width: 90vw;
   margin: 0 auto;
   display: flex;
@@ -157,14 +158,14 @@ div {
   justify-content: center;
 }
 
-div h2 {
+.create h2 {
   font-family: "Montserrat";
   color: #434343;
   width: 20rem;
   font-size: 1.2rem;
 }
 
-div input {
+.create input {
   border: none;
   padding: 0.5rem;
   margin-right: 0.5rem;
@@ -174,25 +175,34 @@ div input {
   width: 75%;
 }
 
-div input::-moz-placeholder {
+.create input::-moz-placeholder {
   font-family: "Montserrat";
   color: white;
   opacity: 1;
   width: 100%;
 }
 
-div input:-ms-input-placeholder {
+.create input:-ms-input-placeholder {
   font-family: "Montserrat";
   color: white;
   opacity: 1;
   width: 100%;
 }
 
-div input::placeholder {
+.create input::placeholder {
   font-family: "Montserrat";
   color: white;
   opacity: 1;
   width: 100%;
+}
+
+.create .submit {
+  background-color: #4DBF52;
+  color: white;
+  width: 40vw;
+  margin-left: 25vw;
+  margin-top: 2rem;
+  border-radius: 20px;
 }
 
 input:focus {
@@ -250,20 +260,13 @@ input:focus {
   color: #7EDA82;
 }
 
-.submit {
-  background-color: #4DBF52;
-  color: white;
-  width: 40vw;
-  margin-left: 25vw;
-  margin-top: 2rem;
-  border-radius: 20px;
-}
-
 .stats {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  width: 90vw;
+  margin: 0 auto;
 }
 
 .stats .follow {
@@ -300,6 +303,8 @@ input:focus {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 90vw;
+  margin: 0 auto;
 }
 
 .profil-header a {
@@ -348,13 +353,13 @@ section .background {
   z-index: -5;
   position: absolute;
   top: -10rem;
-  left: -1rem;
+  left: 0;
 }
 
 section .social-btn {
   margin-top: 13rem;
   height: 11rem;
-  width: 80vw;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -380,8 +385,89 @@ section .social-btn a {
   margin-top: 2rem;
 }
 
+h3 {
+  font-family: "Montserrat";
+  color: #434343;
+  width: 20rem;
+  font-size: 1.2rem;
+}
+
 .form-login {
-  border: solid 1px red;
+  width: 80vw;
+  height: 10rem;
+  margin: -15rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 10rem;
+  text-align: center;
+}
+
+.form-login input {
+  padding-top: 0.2rem;
+  padding-bottom: 0.7rem;
+  margin-bottom: 0.7rem;
+  border: none;
+  border-bottom: solid 1px #434343;
+}
+
+.form-login input::-moz-placeholder {
+  font-family: "Montserrat";
+  color: #434343;
+  font-size: 0.8rem;
+}
+
+.form-login input:-ms-input-placeholder {
+  font-family: "Montserrat";
+  color: #434343;
+  font-size: 0.8rem;
+}
+
+.form-login input::placeholder {
+  font-family: "Montserrat";
+  color: #434343;
+  font-size: 0.8rem;
+}
+
+.form-login input:focus {
+  border-bottom: solid 1px #434343;
+}
+
+.form-login .left {
+  text-align: right;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-family: "Montserrat";
+  color: #434343;
+  margin-bottom: 1rem;
+}
+
+.form-login .remember {
+  text-align: left;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-family: "Montserrat";
+  color: #434343;
+  margin-bottom: 1rem;
+}
+
+.form-login .submit {
+  background-color: #4DBF52;
+  color: white;
+  width: 40vw;
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-radius: 20px;
+  border: none;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-family: "Montserrat";
+}
+
+.form-login .nav-link {
+  font-family: "Montserrat";
+  color: #4DBF52;
+  margin-top: 3rem;
 }
 
 /*== Load Fonts ==*/
