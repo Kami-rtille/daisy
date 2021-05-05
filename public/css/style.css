@@ -1,4 +1,16 @@
 /*== Load styles ==*/
+.green {
+  background-color: #4DBF52;
+}
+
+.yellow {
+  background-color: #FFC700;
+}
+
+.lightgreen {
+  background-color: #7EDA82;
+}
+
 .container {
   position: relative;
   margin-bottom: 5rem;
@@ -62,11 +74,15 @@
   padding-bottom: 2.5rem;
 }
 
-.post span {
+.post .specs {
+  display: inline-flex;
+  align-items: center;
+}
+
+.post .specs span {
   margin-top: -3rem;
   padding: 0.5rem;
   margin-right: 0.5rem;
-  background-color: #FFC700;
   border-radius: 20px;
   font-family: "Montserrat";
   color: white;
