@@ -9,19 +9,25 @@
 <body>  
     <div class="container">
 @guest
+<svg>
+<image class="logo" src="/assets/logo.svg"/>
+</svg>
+<div class="social-btn">
 @include('socialite.login-register')
     @if (1||Route::has('login'))
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+            <a class="nav-link" href="{{ route('login') }}">{{ __('Continuer avec e-mail') }}</a>
         </li>
     
     @endif
     
     @if (Route::has('register'))
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+            <a class="nav-link" href="{{ route('register') }}">{{ __('Pas encore de compte ? Inscris-toi') }}</a>
         </li>
     @endif
+</div>
+</div>
     @else
     <nav class="menu">
         <a href='/'><img src="/assets/home.svg" alt="Home"/></a>

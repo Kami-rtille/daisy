@@ -4,29 +4,32 @@
 <script src="./js/javascript.js"></script>
 @section("content")
 <div class="profil">
+    <div class="profil-header">
     <h1>{{$user->name}}</h1>
-    <div class="follows">
-       <div id="flip"><p class="follow">Follow {{$user->IfollowThem()->count()}}</p></div>
-        <p class="follow">Followed by {{$user->TheyfollowMe()->count()}}</p>
-    </div>
-@auth
+    @auth
     @if (Auth::id() != $user->id)
-        @if(Auth::user()->IfollowThem->contains($user->id))
-            je le suis <a href="/changesuivi/{{$user->id}}">STOP</a>
-            @else
-                Je ne le suis pas encore <a href="/changesuivi/{{$user->id}}">SUIVRE</a>
+    {{-- <h1>{{$user->name}}</h1> --}}
+     @if(Auth::user()->IfollowThem->contains($user->id))
+    <a class="btn-suivi" href="/changesuivi/{{$user->id}}">Se Désabonner</a>
+    @else
+    <a class="btn-stop" href="/changesuivi/{{$user->id}}">Suivre</a>
         @endif
         @endif
 @endauth
+</div>
+    <div class="stats">
+        <p class="follow"> {{$user->IfollowThem()->count()}} Abonnements </p>
+        <p class="follow"> {{$user->TheyfollowMe()->count()}} Abonnés </p>
+    </div>
 
 @include("firstcontroller._photos", ["photos"=>$user->photos])
 
+    {{-- <div id="panel">
 
-    <div id="panel">
         @foreach($user->IfollowThem as $u)
             <a href="/users/{{$u->id}}" class="users">{{$u->name}}</a>
         @endforeach 
-    </div>
+    </div> --}}
 </div>
 
 

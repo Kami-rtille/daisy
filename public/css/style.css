@@ -17,6 +17,10 @@
   margin-top: 6rem;
 }
 
+.container li {
+  list-style-type: none;
+}
+
 .container > * {
   margin: 0 auto;
 }
@@ -50,7 +54,7 @@
   box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   padding-top: 1rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0rem;
 }
 
 .post .photo_container {
@@ -71,12 +75,15 @@
   text-decoration: none;
   color: #000000;
   font-family: "Montserrat";
-  padding-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  margin-left: 0.5rem;
 }
 
 .post .specs {
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .post .specs span {
@@ -91,7 +98,7 @@
 .header {
   padding-left: 5vw;
   padding-right: 5vw;
-  width: 90vw;
+  width: 80vw;
   height: 5rem;
   display: flex;
   flex-direction: row;
@@ -110,37 +117,208 @@
   font-size: 0.8rem;
 }
 
-* {
+.file-section {
   margin: 0 auto;
-}
-
-.profil {
-  margin: 5% 10%;
-}
-
-.follows {
   display: flex;
-  margin: 5% 20%;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 10rem;
+  box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  color: #434343;
+  font-family: "Montserrat";
+  border-radius: 10px;
+  margin-bottom: 2rem;
 }
 
-.follows .follow {
+.file {
+  display: none;
+}
+
+div {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div h2 {
+  font-family: "Montserrat";
+  color: #434343;
+  width: 20rem;
+  font-size: 1.2rem;
+}
+
+div input {
+  border: none;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 20px;
+  font-family: "Montserrat";
+  color: white;
+  width: 75%;
+}
+
+div input::-moz-placeholder {
+  font-family: "Montserrat";
+  color: white;
+  opacity: 1;
+  width: 100%;
+}
+
+div input:-ms-input-placeholder {
+  font-family: "Montserrat";
+  color: white;
+  opacity: 1;
+  width: 100%;
+}
+
+div input::placeholder {
+  font-family: "Montserrat";
+  color: white;
+  opacity: 1;
+  width: 100%;
+}
+
+input:focus {
+  outline: none !important;
+  border-color: #4DBF52;
+  border: none;
+  background-color: white;
+}
+
+.yellow:focus {
+  border: solid 1px #FFC700;
+}
+
+.yellow:focus::-moz-placeholder {
+  color: #FFC700;
+}
+
+.yellow:focus:-ms-input-placeholder {
+  color: #FFC700;
+}
+
+.yellow:focus::placeholder {
+  color: #FFC700;
+}
+
+.green:focus {
+  border: solid 1px #4DBF52;
+}
+
+.green:focus::-moz-placeholder {
+  color: #4DBF52;
+}
+
+.green:focus:-ms-input-placeholder {
+  color: #4DBF52;
+}
+
+.green:focus::placeholder {
+  color: #4DBF52;
+}
+
+.lightgreen:focus {
+  border: solid 1px #7EDA82;
+}
+
+.lightgreen:focus::-moz-placeholder {
+  color: #7EDA82;
+}
+
+.lightgreen:focus:-ms-input-placeholder {
+  color: #7EDA82;
+}
+
+.lightgreen:focus::placeholder {
+  color: #7EDA82;
+}
+
+.submit {
+  background-color: #4DBF52;
+  color: white;
+  width: 40vw;
+  margin-left: 25vw;
+  margin-top: 2rem;
+  border-radius: 20px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.stats .follow {
   margin: 2vw;
   font-family: "Montserrat";
   color: #434343;
 }
 
-.users {
+.specs {
+  display: inline-flex;
+  align-items: center;
+}
+
+.specs span {
+  margin-top: -3rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 20px;
   font-family: "Montserrat";
+  color: white;
+}
+
+.profil-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profil-header a {
+  text-decoration: none;
+  font-family: "Montserrat";
+  padding: 0.4rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+.profil-header .btn-stop {
+  background-color: #4DBF52;
+  border: solid 1px #4DBF52;
+  color: white;
+}
+
+.profil-header .btn-suivi {
+  background-color: white;
+  border: solid 1px #4DBF52;
   color: #4DBF52;
-  font-size: 1rem;
 }
 
-#panel, #flip {
-  text-align: center;
+.logo {
+  width: 50vw;
+  fill: white;
 }
 
-#panel {
-  display: none;
+.social-btn {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-btn a {
+  text-decoration: none;
+  margin: 2rem;
+  height: 2rem;
+  margin-top: 1rem;
+  border: solid 1px red;
 }
 
 /*== Load Fonts ==*/

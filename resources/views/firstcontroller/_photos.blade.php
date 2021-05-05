@@ -9,7 +9,7 @@
             <span class="yellow" >{{$p->title}}</span>
             <span class="lightgreen">{{$p->spec1}}</span>
             <span class="green">{{$p->spec2}}</span>
-</div>
+            </div>
             <!-- <p>{{$p->user->name}}</p> -->
             
         </div>
