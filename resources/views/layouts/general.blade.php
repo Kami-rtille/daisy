@@ -29,23 +29,23 @@
         <a href='/herbarium'><img src="/assets/book.svg" alt="Herbarium"/></a>
         <a href="/users/{{ Auth::user()->id }}"><img src="/assets/user.svg" alt="Profil"/></a>
     </nav>
-        <li>
-            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                {{ Auth::user()->name }}
-            </a>
-
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
+    
+    <div class="header">
+            <a class="logo" href="/">
+                <img src="/assets/logo.svg"/>
             </a>
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
             </form>
-        </div>
-    </li>
+
+            <a class="dropdown-item" href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                {{ __('Déconnexion') }}
+            </a>
+       
+    </div>
     
     <main>
         @yield('content')

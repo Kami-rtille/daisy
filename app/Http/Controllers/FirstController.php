@@ -30,12 +30,15 @@ class FirstController extends Controller
 
         $validated = $request->validate([
             "title" => "required|min:3|max:255",
+            "spec1" => "required|min:3|max:255",
+            "spec2" => "required|min:3|max:255",
             "image" => "file|mimes:jpg,bmp,png"
         ]);
 
         $p = new Photo();
         $p->title = $request->input("title");
-
+        $p->spec1 = $request->input("spec1");
+        $p->spec2 = $request->input("spec2");
         $name = $request->file("image")->hashName(); 
         $request->file("image")->move("images/uploads/".Auth::id(), $name);
         $p->url = "/images/uploads/".Auth::id()."/$name";
@@ -53,33 +56,30 @@ class FirstController extends Controller
         Auth::user()->IFollowThem()->toggle($id);
         return back();
     }
-  
+
     public function herbarium(){
-       // $plant = Http::get('https://trefle.io/api/v1/plants?token=9kzxH4ZVjL9YAkBi8_ox02G5YlzfDJbTR91UZA9BJMk&page=12 ');
-    $plant = [1=>2, 2=>3];
+
+       // $plant = Http::get('https://trefle.io/api/v1/plants?token=9kzxH4ZVjL9YAkBi8_ox02G5YlzfDJbTR91UZA9BJMk&page=12');
        return view("firstcontroller.herbarium", ["plant" => $plant->json()]);
     }
+
     public function herbariumsearch($search){
-        $response = Http::get('https://trefle.io/api/v1/plants/search?token=9kzxH4ZVjL9YAkBi8_ox02G5YlzfDJbTR91UZA9BJMk&q=' .$search);
+        $response = Http::get('https://trefle.io/api/v1/plants/search?token=9kzxH4ZVjL9YAkBi8_ox02G5YlzfDJbTR91UZA9BJMk&q='.$search);
        return view("firstcontroller.herbarium", ["responses" => $response->json()]);
     }
 
-    public function swagger(){
-    
-       
-$yamlContents = Yaml::parse(file_get_contents('filepath'));
-print_r($yamlContents);
 
-        $yaml = Yaml::parse($paths);
-        var_dump($yaml);
-        
-        // convertit la syntaxe YAML vers une variable PHP
-        $parsed = yaml_parse($yaml);
-        
-        // vérifie que la conversion a produit une structure équivalente
-        var_dump($parsed == $invoice);    }
-   
+    public function swagger(){         
+        $yamlContents = Yaml::parse(file_get_contents('filepath'));
+        print_r($yamlContents);
+
+                $yaml = Yaml::parse($paths);
+                var_dump($yaml);
+                
+                // convertit la syntaxe YAML vers une variable PHP
+                $parsed = yaml_parse($yaml);
+                
+                // vérifie que la conversion a produit une structure équivalente
+                var_dump($parsed == $invoice);    
+            }
 }
-
-
-
