@@ -18,9 +18,10 @@
 
 @include("firstcontroller._photos", ["photos"=>$user->photos])
 
-<!-- @foreach($user->IfollowThem as $u){
+@foreach($user->IfollowThem as $u)
     {{$u->name}}
-}
-@endforeach -->
+
+@endforeach 
+
 @endsection
 

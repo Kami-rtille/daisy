@@ -1,10 +1,15 @@
 @extends("layouts.general")
 
 @section("content")
-    <h1>A propos</h1>
-    <p>Le site au top</p>
+    <!--<p>define('content_path', dirname(__DIR__).DIRECTORY_SEPARATOR.'content');
 
-<div class="sheets">
+   $app = new \Slim\Slim(['debug' => true]);
+
+   $files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(content_path));
+   foreach($files as $files)
+    var_dump($files);
+   endforeach
+</p> -->
 
     @foreach($plant['data'] as $ref)  <!-- début de boucle -->
     <div class="sheet">
@@ -16,6 +21,6 @@
     </div>
     @endforeach                      <!-- fin de boucle -->
 
-</div>
+
 
 @endsection

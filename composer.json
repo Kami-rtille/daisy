@@ -12,7 +12,10 @@
         "laravel/framework": "^8.12",
         "laravel/socialite": "^5.2",
         "laravel/tinker": "^2.5",
-        "laravel/ui": "^3.2"
+        "laravel/ui": "^3.2",
+        "pragmarx/yaml": "^1.2",
+        "slim/slim": "^4.7",
+        "symfony/yaml": "^5.2"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
