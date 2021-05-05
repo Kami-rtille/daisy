@@ -6,6 +6,9 @@
             <img src="{{$p->url}}" alt="{{$p->title}}" />
             </div>
             <span>{{$p->title}}</span>
+            <span>{{$p->spec1}}</span>
+            <span>{{$p->spec2}}</span>
+
             <!-- <p>{{$p->user->name}}</p> -->
             
         </div>

@@ -29,12 +29,15 @@ class FirstController extends Controller
 
         $validated = $request->validate([
             "title" => "required|min:3|max:255",
+            "spec1" => "required|min:3|max:255",
+            "spec2" => "required|min:3|max:255",
             "image" => "file|mimes:jpg,bmp,png"
         ]);
 
         $p = new Photo();
         $p->title = $request->input("title");
-
+        $p->spec1 = $request->input("spec1");
+        $p->spec2 = $request->input("spec2");
         $name = $request->file("image")->hashName(); 
         $request->file("image")->move("images/uploads/".Auth::id(), $name);
         $p->url = "/images/uploads/".Auth::id()."/$name";
