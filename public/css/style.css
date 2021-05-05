@@ -17,6 +17,10 @@
   margin-top: 6rem;
 }
 
+.container li {
+  list-style-type: none;
+}
+
 .container > * {
   margin: 0 auto;
 }
@@ -50,7 +54,7 @@
   box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   padding-top: 1rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0rem;
 }
 
 .post .photo_container {
@@ -71,12 +75,15 @@
   text-decoration: none;
   color: #000000;
   font-family: "Montserrat";
-  padding-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  margin-left: 0.5rem;
 }
 
 .post .specs {
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .post .specs span {
@@ -89,9 +96,9 @@
 }
 
 .header {
-  padding-left: 2.5vw;
-  padding-right: 2.5vw;
-  width: 85vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  width: 80vw;
   height: 5rem;
   display: flex;
   flex-direction: row;
@@ -239,39 +246,79 @@ input:focus {
   border-radius: 20px;
 }
 
-* {
-  margin: 0 auto;
-}
-
-.profil {
-  margin: 5% 10%;
-}
-
-.follows {
+.stats {
   display: flex;
-  margin: 5% 20%;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
-.follows .follow {
+.stats .follow {
   margin: 2vw;
   font-family: "Montserrat";
   color: #434343;
 }
 
-.users {
+.specs {
+  display: inline-flex;
+  align-items: center;
+}
+
+.specs span {
+  margin-top: -3rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 20px;
   font-family: "Montserrat";
+  color: white;
+}
+
+.profil-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profil-header a {
+  text-decoration: none;
+  font-family: "Montserrat";
+  padding: 0.4rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
+.profil-header .btn-stop {
+  background-color: #4DBF52;
+  border: solid 1px #4DBF52;
+  color: white;
+}
+
+.profil-header .btn-suivi {
+  background-color: white;
+  border: solid 1px #4DBF52;
   color: #4DBF52;
-  font-size: 1rem;
 }
 
-#panel, #flip {
-  padding: 5px;
-  text-align: center;
+.logo {
+  width: 50vw;
+  fill: white;
 }
 
-#panel {
-  padding: 50px;
-  display: none;
+.social-btn {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-btn a {
+  text-decoration: none;
+  margin: 2rem;
+  height: 2rem;
+  margin-top: 1rem;
+  border: solid 1px red;
 }
 
 /*== Load Fonts ==*/

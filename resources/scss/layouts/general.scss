@@ -2,6 +2,10 @@
     position: relative;
     margin-bottom: 5rem;
     margin-top: 6rem;
+
+    li{
+        list-style-type: none;
+    }
 }
 
 .container > * {

@@ -1,13 +1,10 @@
-*{
-    margin: 0 auto;
-}
 
-.profil{
-    margin: 5% 10%;
-}
-.follows{
+.stats{
     display: flex;
-    margin: 5% 20%;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
     .follow{
         margin: 2vw;
         font-family: $text;
@@ -15,18 +12,47 @@
     }
 }
 
-.users{
+
+  .specs{
+    display: inline-flex;
+    align-items:center;
+
+    span{
+    margin-top: -3rem;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 20px;
     font-family: $text;
-    color:$green;
-    font-size: 1rem;
+    color: white;
+
+}
 }
 
-#panel, #flip {
-    padding: 5px;
-    text-align: center;
-  }
-  
-  #panel {
-    padding: 50px;
-    display: none;
-  }
+.profil-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    a{
+        text-decoration: none;
+        font-family: $text;
+        padding: 0.4rem;
+        border-radius: 10px;
+        font-size: 0.8rem;
+    }
+
+    .btn-stop{
+        background-color: $green;
+        border: solid 1px $green;
+        color: white;
+        
+    }
+
+    .btn-suivi{
+        background-color: white;
+        border: solid 1px $green;
+        color: $green;
+        
+    }
+}

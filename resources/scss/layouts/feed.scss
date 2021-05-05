@@ -11,7 +11,7 @@
     // border-top-right-radius: 10px;
     border-radius: 10px;
     padding-top: 1rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0rem;
 
 
 .photo_container{
@@ -30,14 +30,14 @@
     text-decoration: none;
     color: #000000;
     font-family: $text;
-    padding-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    margin-left: 0.5rem;
 }
-
-
-
 .specs{
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
     align-items:center;
+    justify-content:flex-end;
 
     span{
     margin-top: -3rem;
