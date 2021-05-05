@@ -61,7 +61,10 @@ class FirstController extends Controller
         $plantaes = Plantaes::all(); 
         return view("firstcontroller.herbarium", ["plantaes" => $plantaes]);
     }
-
+    public function ficheHerbier($id) {
+        $plantae = Plantaes::findOrFail($id);
+        return view("firstcontroller.ficheHerbier", ["plantae" => $plantae]);
+    }
     public function herbariumsearch($search){
         $response = Http::get('https://trefle.io/api/v1/plants/search?token=9kzxH4ZVjL9YAkBi8_ox02G5YlzfDJbTR91UZA9BJMk&q='.$search);
        return view("firstcontroller.herbarium", ["responses" => $response->json()]);

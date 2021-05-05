@@ -16,7 +16,7 @@ use App\Http\Controllers\SocialiteController;
 */
 
 Route::get('/herbarium', [FirstController::class, 'herbarium']);
-Route::get('/herbarium/{search}', [FirstController::class, 'herbarium']);
+Route::get('/herbarium/{id}', [FirstController::class, 'ficheHerbier']);
 
 Route::get('/', [FirstController::class, 'index']);
 Route::get('/article/{id}', [FirstController::class, 'article']);
