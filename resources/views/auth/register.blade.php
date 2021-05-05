@@ -73,4 +73,6 @@
         </div>
     </div>
 </div>
+
+<a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
 @endsection

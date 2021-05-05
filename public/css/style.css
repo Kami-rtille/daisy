@@ -11,6 +11,19 @@
   background-color: #7EDA82;
 }
 
+.google {
+  background-color: #DE5246;
+}
+
+.facebook {
+  background-color: #3B5998;
+}
+
+.white {
+  background-color: white;
+  color: black !important;
+}
+
 .container {
   position: relative;
   margin-bottom: 5rem;
@@ -309,24 +322,57 @@ input:focus {
   color: #4DBF52;
 }
 
-.logo {
-  width: 50vw;
-  fill: white;
-}
-
-.social-btn {
-  height: 10rem;
+section {
+  width: 90vw;
+  margin: 0 auto;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 }
 
-.social-btn a {
+section .logo {
+  width: 10rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+section .background {
+  z-index: -5;
+  position: absolute;
+  top: -10rem;
+  left: -1rem;
+}
+
+section .social-btn {
+  margin-top: 13rem;
+  height: 11rem;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+section .social-btn a {
   text-decoration: none;
-  margin: 2rem;
-  height: 2rem;
-  margin-top: 1rem;
+  width: 80vw;
+  padding: 1rem 0;
+  color: white;
+  font-family: "Montserrat";
+  border-radius: 10px;
+}
+
+#redirection {
+  color: white;
+  font-size: 0.8rem;
+  font-family: "Montserrat";
+  text-decoration: none;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.form-login {
   border: solid 1px red;
 }
 

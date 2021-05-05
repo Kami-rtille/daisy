@@ -1,20 +1,59 @@
 
-.logo{
-    width: 50vw;
-    fill: white;
+
+
+section{
+    width:90vw;
+    margin:0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction:column;
+
+    .logo{
+        width: 10rem;
+        margin: 0 auto;
+        margin-top:2rem;
+    }
+
+.background{
+    z-index:-5;
+    position: absolute;
+    top: -10rem;
+    left: -1rem;
 }
 
+
 .social-btn{
-    height: 10rem;
+    margin-top:13rem;
+    height: 11rem;
+    width: 80vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    text-align :center;
+    
     a{
     text-decoration: none;
-    margin: 2rem;
-    height: 2rem;
-    margin-top: 1rem;
-    border: solid 1px red;
+    width:80vw;
+    padding: 1rem 0;
+    color: white;
+    font-family: $text;
+    border-radius: 10px;
+
 }
+}
+}
+
+#redirection{
+    color: white;
+    font-size: 0.8rem;
+    font-family: $text;
+    text-decoration: none;
+    text-align:center;
+    margin-top: 2rem;
+}
+
+
+.form-login{
+    border:solid 1px red;
 }
