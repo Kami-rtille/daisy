@@ -273,6 +273,15 @@ input:focus {
   color: white;
 }
 
+.users {
+  text-decoration: none;
+  font-family: "Montserrat";
+  color: #4DBF52;
+  padding: 0.4rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+}
+
 .profil-header {
   display: flex;
   flex-direction: row;
