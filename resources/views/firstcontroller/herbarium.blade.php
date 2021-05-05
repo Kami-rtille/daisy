@@ -1,4 +1,3 @@
-
 @extends("layouts.general")
 
 @section("content")
@@ -18,6 +17,5 @@
     @endforeach                      <!-- fin de boucle -->
 
 </div>
-    
-@endsection
 
+@endsection

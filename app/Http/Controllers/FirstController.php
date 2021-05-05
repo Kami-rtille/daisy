@@ -52,18 +52,13 @@ class FirstController extends Controller
         Auth::user()->IFollowThem()->toggle($id);
         return back();
     }
-  
+
     public function herbarium(){
-        $plant = Http::get('https://trefle.io/api/v1/plants?token=9kzxH4ZVjL9YAkBi8_ox02G5YlzfDJbTR91UZA9BJMk&page=12 ');
+        $plant = Http::get('https://trefle.io/api/v1/plants?token=9kzxH4ZVjL9YAkBi8_ox02G5YlzfDJbTR91UZA9BJMk&page=12');
        return view("firstcontroller.herbarium", ["plant" => $plant->json()]);
     }
     public function herbariumsearch($search){
-        $response = Http::get('https://trefle.io/api/v1/plants/search?token=9kzxH4ZVjL9YAkBi8_ox02G5YlzfDJbTR91UZA9BJMk&q=' .$search);
+        $response = Http::get('https://trefle.io/api/v1/plants/search?token=9kzxH4ZVjL9YAkBi8_ox02G5YlzfDJbTR91UZA9BJMk&q='.$search);
        return view("firstcontroller.herbarium", ["responses" => $response->json()]);
     }
-
-
 }
-
-
-
