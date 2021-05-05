@@ -56,7 +56,7 @@ class FirstController extends Controller
     }
 
     public function herbarium(){
-        $plant = Http::get('https://trefle.io/api/v1/plants?token=9kzxH4ZVjL9YAkBi8_ox02G5YlzfDJbTR91UZA9BJMk');
+        $plant = Http::get('https://trefle.io/api/v1/plants?token=9kzxH4ZVjL9YAkBi8_ox02G5YlzfDJbTR91UZA9BJMk&page=2');
        return view("firstcontroller.herbarium", ["plant" => $plant->json()]);
     }
     public function herbariumsearch($search){
