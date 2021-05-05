@@ -7,27 +7,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>  
-    <div class="container">
+<div class="container">
 @guest
-<svg>
-<image class="logo" src="/assets/logo.svg"/>
-</svg>
+<section>
+<img class="background" src="assets/bg.png"/>
+
+<img class="logo" src="/assets/daisy.png"/>
+
 <div class="social-btn">
 @include('socialite.login-register')
     @if (1||Route::has('login'))
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('login') }}">{{ __('Continuer avec e-mail') }}</a>
-        </li>
-    
+            <a class="white" class="nav-link" href="{{ route('login') }}">{{ __('Continuer avec e-mail') }}</a>
+     </div>
+
+
     @endif
-    
     @if (Route::has('register'))
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('register') }}">{{ __('Pas encore de compte ? Inscris-toi') }}</a>
-        </li>
+            <a class="nav-link" id="redirection" href="{{ route('register') }}">{{ __('Pas encore de compte ? Inscris-toi') }}</a>
     @endif
-</div>
-</div>
+</section>
     @else
     <nav class="menu">
         <a href='/'><img src="/assets/home.svg" alt="Home"/></a>
