@@ -1,6 +1,11 @@
 /*== Load styles ==*/
 .container {
   position: relative;
+  margin-bottom: 5rem;
+}
+
+.container > * {
+  margin: 0 auto;
 }
 
 .menu {
@@ -20,6 +25,50 @@
 
 .sheet img {
   width: 5vw;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  width: 90vw;
+  margin: 3rem auto;
+  box-shadow: 0px 0px 15px -1px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.post .photo_container {
+  border: none;
+  width: 90vw;
+  overflow: hidden;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.post .photo_container img {
+  width: 90vw;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.post .name {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Montserrat";
+  padding-bottom: 2.5rem;
+}
+
+.post span {
+  margin-top: -3rem;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  background-color: #FFC700;
+  border-radius: 20px;
+  font-family: "Montserrat";
+  color: white;
 }
 
 /*== Load Fonts ==*/

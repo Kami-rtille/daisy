@@ -12,11 +12,11 @@
     </div>
 @endif
 
+    <h2>Partage les photos de tes plantes !</h2>
     <form action ="/photos/store" method="post" enctype="multipart/form-data">
     @csrf <br/>
     <input type="text" name="title" value="{{old('title')}}" placeholder="Titre de la photo" required/><br/>
     <input type="file" name="image" placeholder="Upload de la photo" required/><br/>
-    <input type="number" name="note" value="{{old('note')}}" placeholder="Note de la photo" required/><br/>
     <input type="submit" /><br/>
 
     </form>

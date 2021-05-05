@@ -29,7 +29,6 @@ class FirstController extends Controller
 
         $validated = $request->validate([
             "title" => "required|min:3|max:255",
-            "note" => "numeric|min:0|max:20",
             "image" => "file|mimes:jpg,bmp,png"
         ]);
 
@@ -39,7 +38,6 @@ class FirstController extends Controller
         $name = $request->file("image")->hashName(); 
         $request->file("image")->move("images/uploads/".Auth::id(), $name);
         $p->url = "/images/uploads/".Auth::id()."/$name";
-        $p->note = $request->input("note");
         $p->user_id = Auth::id();
         $p->save(); //INSERT....
         return redirect("/");
@@ -54,15 +52,17 @@ class FirstController extends Controller
         Auth::user()->IFollowThem()->toggle($id);
         return back();
     }
-
+  
     public function herbarium(){
-        $plant = Http::get('https://trefle.io/api/v1/plants?token=9kzxH4ZVjL9YAkBi8_ox02G5YlzfDJbTR91UZA9BJMk');
+        $plant = Http::get('https://trefle.io/api/v1/plants?token=9kzxH4ZVjL9YAkBi8_ox02G5YlzfDJbTR91UZA9BJMk&page=12 ');
        return view("firstcontroller.herbarium", ["plant" => $plant->json()]);
     }
     public function herbariumsearch($search){
-        $response = Http::get('https://trefle.io/api/v1/plants/search?token=9kzxH4ZVjL9YAkBi8_ox02G5YlzfDJbTR91UZA9BJMk&q='.$search);
+        $response = Http::get('https://trefle.io/api/v1/plants/search?token=9kzxH4ZVjL9YAkBi8_ox02G5YlzfDJbTR91UZA9BJMk&q=' .$search);
        return view("firstcontroller.herbarium", ["responses" => $response->json()]);
     }
+
+
 }
 
 
