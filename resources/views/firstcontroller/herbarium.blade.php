@@ -3,10 +3,10 @@
 @section("content")
 
     @foreach($plantaes as $plant)
-    <div class="sheet">
+    <div class="herbier">
         <div class="list-herbier">
             <div class="titles">
-            <h3>{{$plant['name']}}</h3>
+            <h3>{{$plant['name']}}, <span>{{$plant['latinName']}}</span></h3> 
             <a class="name" href="herbarium/{{$plant->id}}"> Voir </a>
             </div>
             {{-- <h4>{{$plant['subkingdom']}}</h4>

@@ -1,4 +1,4 @@
-.sheet{
+.herbier{
     width: 90vw;
     margin : 0 auto;
 
@@ -11,10 +11,23 @@
             font-weight: 500;
             font-size: 0.9rem;
             line-height: 3.5rem;
+            color: black;
             text-transform: capitalize;
-            color: $black;
+
+
+            span{
+                font-weight: 300;
+                font-size: 0.9rem;
+                line-height: 3.5rem;
+                text-transform: capitalize;
+                color: grey;
+                font-style: italic;
+                
+            }
+    
         }
 
+    
         a{
             color: $green;
             text-decoration: none;
@@ -32,6 +45,59 @@
             opacity: 0.5;
         }
     }
+
+
+    h2{
+        text-transform: capitalize;
+        margin: 1rem 0;
+    }
+
+    .list{
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content:flex-start;
+        flex-wrap: wrap;
+        column-gap: 0.3rem;
+        row-gap: 0.5rem;
+        
+        margin: 1rem 0;
+    
+        span{
+        padding: 0.2rem 0.4rem;
+        border-radius: 20px;
+        font-family: $text;
+        color: white;
+        font-size: 0.8rem;
+    
+    }
+    }
+
+
+    .separateur{
+        margin-top:2rem;
+        font-size: 0.8rem;
+        font-family: $text;
+        font-weight: bold;
+        color: $black;
+        &:after{
+            content:"";
+            position: absolute;
+            width: 70vw;
+            height: 1px;
+            margin-top: 1rem;
+            left: 1.2rem;
+            background-color: black;
+            opacity: 0.5;
+        }
+    }
+
+    .description{
+        font-family: $text;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+    }
 }
 
 .photo-container{
@@ -39,3 +105,21 @@
     height: 20rem;
     overflow: hidden;
 }
+
+.back{
+    background-color: $lightgreen;
+    color: white;
+    margin : 0 auto;
+    border-radius: 20px;
+    border:none;
+    padding: 0.5rem 2rem;
+    font-family: $text;
+    text-decoration: none;
+    z-index: 2;
+    position: fixed;
+    margin-top : 1rem;
+    left: 1rem;
+
+}
+
+

@@ -46,7 +46,7 @@
             <a class="dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
-                {{ __('Déconnexion') }}
+              <img src="/assets/log-out.svg"/>
             </a>
        
     </div>
