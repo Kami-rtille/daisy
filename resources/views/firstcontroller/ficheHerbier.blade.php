@@ -1,10 +1,18 @@
-@foreach($plantae as $u)
-    <img src="{{$u['pictures']}}" alt="{{$u['name']}}"/><br/>
-    <h4>{{$u['subkingdom']}}</h4>
-    <img src="{{$u['pictures']}}" alt="{{$u['name']}}"/><br/>
+@extends("layouts.general")
 
-    <span class="yellow" >{{$u->category}}</span>
-    <span class="lightgreen">{{$u->subkingdom}}</span>
-    <span class="green">{{$u->divisions}}</span>
-    <span class="green">{{$u->class}}</span>
-@endforeach 
+@section("content")
+<a class="name" href="/herbarium">retour </a> <br/>
+<h1>{{$plantae['name']}}</h1>
+<h4>{{$plantae['subkingdom']}}</h4>
+   
+   
+  
+    <img src="{{$plantae['pictures']}}" alt="{{$plantae['name']}}"/><br/>
+
+    <span class="yellow" >{{$plantae['category']}}</span>
+    <span class="lightgreen">{{$plantae['subkingdom']}}</span>
+    <span class="green">{{$plantae['divisions']}}</span>
+    <span class="green">{{$plantae['class']}}</span>
+
+
+@endsection

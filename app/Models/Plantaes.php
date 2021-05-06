@@ -10,5 +10,8 @@ class Plantaes extends Model
 {
     use HasFactory;
 
-    
+    public function fiche() {
+        // SELECT * FROM users WHERE id = $this->user_id
+        return $this->hasMany("App\Models\Plantea", "id");
+    }
 }

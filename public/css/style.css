@@ -327,14 +327,6 @@ input:focus {
   color: #4DBF52;
 }
 
-.form-check, .form-group {
-  color: red;
-}
-
-#card-body {
-  background-color: yellow;
-}
-
 section {
   width: 90vw;
   margin: 0 auto;
