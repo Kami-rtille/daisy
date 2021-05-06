@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('content')
+<img class="logo" style="width:10rem; margin:0 auto;" src="/assets/logo.svg"/>
+
 <div class="container">
+
             <h3>{{ __('Connexion') }}</h3>
 
                 <form method="POST" class="form-login" action="{{ route('login') }}">
