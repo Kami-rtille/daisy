@@ -1,14 +1,17 @@
 /*== Load styles ==*/
 .green {
   background-color: #4DBF52;
+  color: #4DBF52;
 }
 
 .yellow {
   background-color: #FFC700;
+  color: #FFC700;
 }
 
 .lightgreen {
   background-color: #7EDA82;
+  color: #7EDA82;
 }
 
 .google {
@@ -171,7 +174,6 @@
   margin-right: 0.5rem;
   border-radius: 20px;
   font-family: "Montserrat";
-  color: white;
   width: 75%;
 }
 
@@ -462,33 +464,80 @@ h3 {
   margin-top: 3rem;
 }
 
-.sheet {
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  height: 35rem;
+  font-family: "Montserrat";
+}
+
+.error span {
+  font-weight: bold;
+  font-size: 2.4rem;
+}
+
+.error img {
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+.error h2 {
+  font-weight: 500;
+  margin: 1rem;
+}
+
+.error p {
+  text-decoration: line-through;
+}
+
+.error a {
+  z-index: 5;
+  text-decoration: none;
+  padding: 0 2rem;
+}
+
+.herbier {
   width: 90vw;
   margin: 0 auto;
 }
 
-.sheet .titles {
+.herbier .titles {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.sheet .titles h3 {
+.herbier .titles h3 {
   font-weight: 500;
   font-size: 0.9rem;
   line-height: 3.5rem;
+  color: black;
   text-transform: capitalize;
-  color: #434343;
 }
 
-.sheet .titles a {
+.herbier .titles h3 span {
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 3.5rem;
+  text-transform: capitalize;
+  color: grey;
+  font-style: italic;
+}
+
+.herbier .titles a {
   color: #4DBF52;
   text-decoration: none;
   font-family: "Montserrat";
   font-weight: bold;
 }
 
-.sheet .titles:after {
+.herbier .titles:after {
   content: "";
   position: absolute;
   width: 90vw;
@@ -498,10 +547,76 @@ h3 {
   opacity: 0.5;
 }
 
+.herbier h2 {
+  text-transform: capitalize;
+  margin: 1rem 0;
+}
+
+.herbier .list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  -moz-column-gap: 0.3rem;
+       column-gap: 0.3rem;
+  row-gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.herbier .list span {
+  padding: 0.2rem 0.4rem;
+  border-radius: 20px;
+  font-family: "Montserrat";
+  color: white;
+  font-size: 0.8rem;
+}
+
+.herbier .separateur {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  font-family: "Montserrat";
+  font-weight: bold;
+  color: #434343;
+}
+
+.herbier .separateur:after {
+  content: "";
+  position: absolute;
+  width: 70vw;
+  height: 1px;
+  margin-top: 1rem;
+  left: 1.2rem;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.herbier .description {
+  font-family: "Montserrat";
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+
 .photo-container {
   width: 100vw;
   height: 20rem;
   overflow: hidden;
+}
+
+.back {
+  background-color: #7EDA82;
+  color: white;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: none;
+  padding: 0.5rem 2rem;
+  font-family: "Montserrat";
+  text-decoration: none;
+  z-index: 2;
+  position: fixed;
+  margin-top: 1rem;
+  left: 1rem;
 }
 
 /*== Load Fonts ==*/

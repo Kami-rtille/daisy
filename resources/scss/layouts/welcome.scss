@@ -128,4 +128,45 @@ h3{
     margin-top: 3rem;
 
 }
+
+
 }
+
+.error{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    height: 35rem;
+    font-family: $text;
+
+    span{
+        font-weight: bold;
+        font-size: 2.4rem;
+    }
+   img{
+       position: absolute;
+       z-index: -5;
+       top: 0;
+       left: 0;
+       height: 100vh;
+   }
+
+   h2{
+       font-weight: 500;
+       margin: 1rem;
+   }
+
+   p{
+       text-decoration: line-through;
+   }
+   a{
+       z-index: 5;
+       text-decoration: none;
+       padding: 0 2rem;
+   }
+
+
+}
+

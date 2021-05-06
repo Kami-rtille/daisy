@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-            <h3>{{ __('Connecte toi') }}</h3>
+            <h3>{{ __('Connexion') }}</h3>
 
                 <form method="POST" class="form-login" action="{{ route('login') }}">
                         @csrf
