@@ -5,8 +5,6 @@
 
                 <form method="POST" class="form-login" action="{{ route('login') }}">
                         @csrf
-                        <div class="form-group row" style='border:solid 1px red'>
-                            <div class="col-md-6">
 
                                 <input id="email" placeholder="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 

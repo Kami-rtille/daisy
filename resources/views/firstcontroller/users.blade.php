@@ -21,11 +21,11 @@
         <p class="follow"> {{$user->TheyfollowMe()->count()}} Abonnés </p>
     </div>
 
-    <div class="users" id="panel">
+    {{-- <div class="users" id="panel">
         @foreach($user->IfollowThem as $u)
             <a href="/users/{{$u->id}}" class="users">{{$u->name}}</a>
         @endforeach 
-    </div>
+    </div> --}}
 @include("firstcontroller._photos", ["photos"=>$user->photos])
 
 
