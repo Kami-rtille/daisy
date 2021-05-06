@@ -109,9 +109,9 @@
 }
 
 .header {
-  padding-left: 10vw;
-  padding-right: 10vw;
-  width: 80vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  width: 90vw;
   height: 5rem;
   display: flex;
   flex-direction: row;
@@ -460,6 +460,48 @@ h3 {
   font-family: "Montserrat";
   color: #4DBF52;
   margin-top: 3rem;
+}
+
+.sheet {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.sheet .titles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sheet .titles h3 {
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 3.5rem;
+  text-transform: capitalize;
+  color: #434343;
+}
+
+.sheet .titles a {
+  color: #4DBF52;
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+
+.sheet .titles:after {
+  content: "";
+  position: absolute;
+  width: 90vw;
+  height: 1px;
+  margin-top: 2rem;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.photo-container {
+  width: 100vw;
+  height: 20rem;
+  overflow: hidden;
 }
 
 /*== Load Fonts ==*/

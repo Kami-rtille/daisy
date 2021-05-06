@@ -1,0 +1,41 @@
+.sheet{
+    width: 90vw;
+    margin : 0 auto;
+
+    .titles{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        h3{
+            font-weight: 500;
+            font-size: 0.9rem;
+            line-height: 3.5rem;
+            text-transform: capitalize;
+            color: $black;
+        }
+
+        a{
+            color: $green;
+            text-decoration: none;
+            font-family: $text;
+            font-weight: bold;
+        }
+
+        &:after{
+            content:"";
+            position: absolute;
+            width: 90vw;
+            height: 1px;
+            margin-top: 2rem;
+            background-color: black;
+            opacity: 0.5;
+        }
+    }
+}
+
+.photo-container{
+    width: 100vw;
+    height: 20rem;
+    overflow: hidden;
+}
